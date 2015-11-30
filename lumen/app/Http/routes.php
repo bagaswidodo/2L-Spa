@@ -11,6 +11,29 @@
 |
 */
 
+// $app->get('/', function () use ($app) {
+//     return $app->welcome();
+// });
+
 $app->get('/', function () use ($app) {
-    return $app->welcome();
+    return view('master');
 });
+
+
+$namespace = 'App\Http\Controllers';
+
+// $app->post('auth', 'UserController@checkAuth');
+$app->group(['namespace' => $namespace] , function($app){
+	$app->post('auth', ['uses' => 'UserController@checkAuth', 'as' => 'authUser']);
+});
+
+
+// $app->group(['namespace' => $namespace, 'prefix' => $prefix] , function($app){
+//     $app->get('/users', ['uses' => 'UserController@getAllUsers', 'as' => 'allUsers']);
+//     $app->get('/user/{id}', ['uses' => 'UserController@getUser', 'as' => 'singleUser']);
+//     $app->post('/user', ['uses' => 'UserController@saveUser', 'as' => 'saveUser']);
+//     $app->put('/user/{id}', ['uses' => 'UserController@updateUser', 'as' => 'updateUser']);
+//     $app->delete('/user/{id}', ['uses' => 'UserController@deleteUser', 'as' => 'deleteUser']);
+// });
+
+
