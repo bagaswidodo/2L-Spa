@@ -1,3 +1,4 @@
+//create angular controller
 myApp.controller('userController', ['$scope', '$location', 'userModel', function($scope, $location, userModel) {
     angular.extend($scope, {
         login: {

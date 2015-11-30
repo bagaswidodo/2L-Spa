@@ -11,6 +11,7 @@
     </script>
 </head>
 <body>
+<!-- master page -->
     <div class="container" ng-controller="globalController">
         <div ng-view></div>
     </div>

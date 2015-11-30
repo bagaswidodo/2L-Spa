@@ -1,3 +1,4 @@
+//create angular model
 myApp.factory('userModel', ['$http', '$cookies', function($http, $cookies) {
     var userModel = {};
 

@@ -1,4 +1,5 @@
 /*This is the main file where angular is defined*/
+//create main angular file
 var myApp = angular.module('myApp', ['ngRoute', 'ngCookies']);
 
 myApp.config(['$routeProvider', '$locationProvider',

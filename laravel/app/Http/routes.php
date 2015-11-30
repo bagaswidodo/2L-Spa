@@ -11,12 +11,11 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+//first create a route
 Route::get('/', function () {
     return view('master');
 });
+
 
 Route::post('auth', 'UserController@checkAuth');
 Route::resource('user', 'UserController');
