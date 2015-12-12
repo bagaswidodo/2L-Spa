@@ -15,6 +15,12 @@ myApp.config(['$routeProvider', '$locationProvider',
             authenticated: true
         });
 
+        $routeProvider.when('/nearby', {
+            templateUrl: 'templates/guest/nearby.html',
+            controller: 'userController',
+            authenticated: false
+        });
+
         $routeProvider.otherwise('/');
     }
 ]);
